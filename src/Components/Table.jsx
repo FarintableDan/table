@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { fieldsToRender, getCurrentPage, getMaxPage, ITEMS_ON_PAGE } from "../helpers";
 import { useSortableData } from "../hooks";
@@ -19,15 +19,6 @@ export const Table = ({ data, header }) => {
   }
 
   const currentPage = getCurrentPage(items, page);
-
-  useEffect(() => {
-    if (page === maxPage) {
-      setPage(0);
-    }
-    if (page < 0) {
-      setPage(maxPage);
-    }
-  }, [page, maxPage]);
 
   return (
     <div className="table">

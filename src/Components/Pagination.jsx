@@ -3,7 +3,11 @@ import React from 'react';
 export const Pagination = ({setPage, activePage, maxPage}) => {
   return (
     <div className="pagination">
-      <button onClick={() => setPage(activePage - 1)} className="pagination__arrow pagination__prev">
+      <button
+        onClick={() => setPage(activePage - 1)}
+        className="pagination__arrow pagination__prev"
+        disabled={activePage === 0}
+      >
         {'<'}
       </button>
       {[...Array(Math.ceil(maxPage))].map((page, index) => (
@@ -18,6 +22,7 @@ export const Pagination = ({setPage, activePage, maxPage}) => {
       <button
         onClick={() => setPage(activePage + 1)}
         className="pagination__arrow pagination__next"
+        disabled={activePage === maxPage - 1}
       >
         {'>'}
       </button>
