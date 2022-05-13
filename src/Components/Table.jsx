@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import { fieldsToRender, getCurrentPage, getMaxPage, ITEMS_ON_PAGE } from "../helpers";
+import { getCurrentPage, getMaxPage } from "../helpers";
+import { fieldsToRender, ITEMS_ON_PAGE } from "../constants";
 import { useSortableData } from "../hooks";
 
 import { Pagination } from "./Pagination";
