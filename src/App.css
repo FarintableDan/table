@@ -1,0 +1,142 @@
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: #111111;
+}
+
+.table {
+    min-height: 415px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 100%;
+}
+
+button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.table__row {
+    display: flex;
+    padding: 8px;
+}
+
+.table__cell {
+    display: flex;
+    flex: 1;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.table__footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: auto;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination__button {
+    margin: 0 12px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination__button_active {
+    background: #219653;
+    color: #FFFFFF;
+}
+
+.button_reset {
+    margin-left: 24px;
+}
+
+.table__row:nth-child(2n - 1) {
+    background-color: #F5F5F5;
+}
+
+.table__row:hover {
+    background-color: #F1FCF6;
+}
+
+.table__header .table__cell {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    color: #111111;
+    display: flex;
+    align-content: center;
+}
+
+.table__row__icon {
+    visibility: hidden;
+    display: flex;
+    align-content: center;
+    margin-left: -21px;
+    margin-right: 5px;
+}
+
+.table__row__icon svg {
+    fill: #111111;
+    display: block;
+    margin: auto;
+}
+
+.table__row_icon_active {
+    visibility: visible;
+}
+
+.table__cell:hover > .table__row__icon {
+    visibility: visible;
+}
+
+.table__cell_active .table__row__icon {
+    visibility: visible;
+    fill: #219653;
+}
+
+.table__cell_active .table__row__icon svg {
+    fill: #219653;
+}
+
+.table__row__icon_increase {
+    transform: rotate(180deg);
+}
+
+.button_reset {
+    color: #219653;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button_reset span {
+    margin-right: 8px;
+}
+
+.pagination__arrow {
+    cursor: pointer;
+}
+
+.pagination__next {
+    margin-left: 16px;
+}
+
+.pagination__prev {
+    margin-right: 16px;
+}
